@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&G Insurance Group - Seguros a un click</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <script src="script.js" async defer></script>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <span data-en="Call us now:" data-es="Llámenos ahora:">Call us now:</span>
+                <a href="tel:(728) 205-6548">(728) 205-6548</a>
+            </div>
+            <div>
+                <a href="mailto:bginsurance@gmail.com">bginsurance@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"> <img src="assets/logo.jpg" height="50" width="90"  alt="Business Owner">  </div>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+                <nav id="mainNav">
+                    <a href="#home" data-en="Home" data-es="Inicio">Home</a>
+                    <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+                    <a href="#about-us" data-en="About" data-es="Acerca de">About</a>
+                    <a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+                    <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+                    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                </nav>
+                <div class="controls">
+                    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <mask class="moon" id="moon-mask">
+                                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                <circle cx="24" cy="10" r="6" fill="black" />
+                            </mask>
+                            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                            <g class="sun-beams" stroke="currentColor">
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="lang-toggle" id="lang-toggle" title="Toggle language" aria-label="English" aria-live="polite">
+                        <svg class="flag-icon us" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="2" fill="#B22234"/>
+                            <path d="M0 3h24M0 6h24M0 9h24M0 12h24M0 15h24M0 18h24M0 21h24" stroke="#fff" stroke-width="1.8"/>
+                            <rect width="10" height="10.5" rx="1" fill="#3C3B6E"/>
+                            <g fill="#fff">
+                                <circle cx="2" cy="2" r="0.4"/>
+                                <circle cx="4.5" cy="2" r="0.4"/>
+                                <circle cx="7" cy="2" r="0.4"/>
+                                <circle cx="2" cy="4" r="0.4"/>
+                                <circle cx="4.5" cy="4" r="0.4"/>
+                                <circle cx="7" cy="4" r="0.4"/>
+                                <circle cx="2" cy="6" r="0.4"/>
+                                <circle cx="4.5" cy="6" r="0.4"/>
+                                <circle cx="7" cy="6" r="0.4"/>
+                                <circle cx="2" cy="8" r="0.4"/>
+                                <circle cx="4.5" cy="8" r="0.4"/>
+                                <circle cx="7" cy="8" r="0.4"/>
+                            </g>
+                        </svg>
+                        <svg class="flag-icon es" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="2" fill="#AA151B"/>
+                            <rect y="6" width="24" height="12" fill="#F1BF00"/>
+                            <g transform="translate(8, 12)">
+                                <rect x="0" y="-2" width="2" height="4" fill="#AA151B"/>
+                                <rect x="0.5" y="-1.5" width="1" height="3" fill="#F1BF00"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-en="Protecting What Matters Most" data-es="Protegiendo Lo Que Más Importa">Protecting What Matters Most</h1>
+                <p data-en="Comprehensive insurance solutions tailored to your needs. Trust, reliability, and peace of mind for you and your family." data-es="Soluciones de seguros integrales adaptadas a sus necesidades. Confianza, fiabilidad y tranquilidad para usted y su familia.">Comprehensive insurance solutions tailored to your needs. Trust, reliability, and peace of mind for you and your family.</p>
+                <a href="#contact" class="cta-button" data-en="Get Started Today" data-es="Comience Hoy">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Carousel Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Insurance Services" data-es="Nuestros Servicios de Seguros">Our Insurance Services</h2>
+            <p class="section-subtitle" data-en="Comprehensive coverage options designed to protect what matters most" data-es="Opciones de cobertura integral diseñadas para proteger lo que más importa">Comprehensive coverage options designed to protect what matters most</p>
+
+            <div class="carousel-container">
+                <div class="carousel" id="serviceCarousel">
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop" alt="Home Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Home Insurance" data-es="Seguro de Hogar">Home Insurance</h3>
+                            <p data-en="Protect your home and belongings with comprehensive coverage. From natural disasters to theft, we've got you covered with flexible plans that fit your needs and budget." data-es="Proteja su hogar y pertenencias con cobertura integral. Desde desastres naturales hasta robo, lo tenemos cubierto con planes flexibles que se adaptan a sus necesidades y presupuesto.">Protect your home and belongings with comprehensive coverage. From natural disasters to theft, we've got you covered with flexible plans that fit your needs and budget.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&h=800&fit=crop" alt="Auto Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Auto Insurance" data-es="Seguro de Auto">Auto Insurance</h3>
+                            <p data-en="Drive with confidence knowing you have reliable coverage for accidents, theft, and damages. Competitive rates and exceptional service for all your automotive needs." data-es="Conduzca con confianza sabiendo que tiene cobertura confiable para accidentes, robo y daños. Tarifas competitivas y servicio excepcional para todas sus necesidades automotrices.">Drive with confidence knowing you have reliable coverage for accidents, theft, and damages. Competitive rates and exceptional service for all your automotive needs.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&h=800&fit=crop" alt="Life Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Life Insurance" data-es="Seguro de Vida">Life Insurance</h3>
+                            <p data-en="Secure your family's future with life insurance plans that provide financial protection and peace of mind. Term life, whole life, and universal life options available." data-es="Asegure el futuro de su familia con planes de seguro de vida que brindan protección financiera y tranquilidad. Opciones de vida a término, vida entera y vida universal disponibles.">Secure your family's future with life insurance plans that provide financial protection and peace of mind. Term life, whole life, and universal life options available.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=800&fit=crop" alt="Health Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Health Insurance" data-es="Seguro de Salud">Health Insurance</h3>
+                            <p data-en="Access quality healthcare with our comprehensive health insurance plans. Medical, dental, and vision coverage for individuals and families at affordable rates." data-es="Acceda a atención médica de calidad con nuestros planes integrales de seguro de salud. Cobertura médica, dental y de visión para individuos y familias a tarifas asequibles.">Access quality healthcare with our comprehensive health insurance plans. Medical, dental, and vision coverage for individuals and families at affordable rates.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop" alt="Business Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Business Insurance" data-es="Seguro de Negocios">Business Insurance</h3>
+                            <p data-en="Safeguard your business assets and operations with customized commercial insurance solutions. Property, liability, and workers' compensation coverage tailored to your industry." data-es="Proteja los activos y operaciones de su negocio con soluciones de seguro comercial personalizadas. Cobertura de propiedad, responsabilidad civil y compensación de trabajadores adaptada a su industria.">Safeguard your business assets and operations with customized commercial insurance solutions. Property, liability, and workers' compensation coverage tailored to your industry.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=800&fit=crop" alt="Travel Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Travel Insurance" data-es="Seguro de Viaje">Travel Insurance</h3>
+                            <p data-en="Travel worry-free with comprehensive coverage for trip cancellations, medical emergencies, and lost luggage. Domestic and international travel protection plans available." data-es="Viaje sin preocupaciones con cobertura integral para cancelaciones de viaje, emergencias médicas y equipaje perdido. Planes de protección de viajes nacionales e internacionales disponibles.">Travel worry-free with comprehensive coverage for trip cancellations, medical emergencies, and lost luggage. Domestic and international travel protection plans available.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">‹</button>
+                <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="setCarousel(0)"></span>
+                <span class="dot" onclick="setCarousel(1)"></span>
+                <span class="dot" onclick="setCarousel(2)"></span>
+                <span class="dot" onclick="setCarousel(3)"></span>
+                <span class="dot" onclick="setCarousel(4)"></span>
+                <span class="dot" onclick="setCarousel(5)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+      <section class="about-us" id="about-us">
+          <div class="container">
+              <h2 class="section-title" data-en="About B&G Insurance Group" data-es="Acerca de B&G Insurance Group">About B&G Insurance Group</h2>
+              <p class="section-subtitle" data-en="Your trusted partner in comprehensive insurance solutions" data-es="Su socio de confianza en soluciones integrales de seguros">Your trusted partner in comprehensive insurance solutions</p>
+
+              <div class="about-us-content">
+                  <div class="about-us-text">
+                    <h3 data-en="Our Story" data-es="Nuestra Historia">Our Story</h3>
+                    <p
+                        data-en=
+                        "Founded in 2014, we have extensive background in premium auditing. In 2019 we embarked on getting licensed to handle general lines committed to putting our clients first in an industry often focused on profits. We are fully committed to honesty and transparency, with a focus on serving our clients, not just selling products."
+                        data-es=
+                        "Fundada en 2014, contamos con una amplia trayectoria en auditoría de primas. En 2019 emprendimos el proceso de obtención de licencias para manejar líneas generales, comprometidos a poner a nuestros clientes primero en una industria a menudo centrada en las ganancias. Estamos totalmente comprometidos con la honestidad y la transparencia, con un enfoque en servir a nuestros clientes, no solo en vender productos."
+                    > Founded in 2014, we have extensive background in premium auditing. In 2019 we embarked on getting licensed to handle general lines committed to putting our clients first in an industry often focused on profits. We are fully committed to honesty and transparency, with a focus on serving our clients, not just selling products.
+                    </p>
+
+                    <h3 data-en="Our Goal" data-es="Nuestra Misión">Our Goal</h3>
+                    <p
+                        data-en=
+                        "Our agency offers you hands on dedicated assistance in each interaction, with the aim of solving the needs of our Spanish and English speaking clients. We strive in demonstrating honesty, loyalty, fidelity, and altruism to our clients. Above all, we always think of our clients and their challenges, their way of life and all the adversities that arise. Our main motivation has always been to provide protection and peace of mind to a community that needs us, and to which we remain deeply committed."
+                        data-es=
+                        "Nuestra agencia le ofrece asistencia práctica y dedicada en cada interacción, con el objetivo de resolver las necesidades de nuestros clientes hispanohablantes y angloparlantes. Nos esforzamos por demostrar honestidad, lealtad, fidelidad y altruismo hacia nuestros clientes. Por encima de todo, siempre pensamos en nuestros clientes y en sus desafíos, su forma de vida y todas las adversidades que surgen. Nuestra principal motivación siempre ha sido brindar protección y tranquilidad a una comunidad que nos necesita y a la cual seguimos profundamente comprometidos.">
+                        Our agency offers you hands on dedicated assistance in each interaction, with the aim of solving the needs of our Spanish and English speaking clients. We strive in demonstrating honesty, loyalty, fidelity, and altruism to our clients. Above all, we always think of our clients and their challenges, their way of life and all the adversities that arise. Our main motivation has always been to provide protection and peace of mind to a community that needs us, and to which we remain deeply committed.
+                    </p>
+
+                      <h3 data-en="Our Values" data-es="Nuestros Valores">Our Values</h3>
+                      <div class="values-list">
+                          <div class="value-item">
+                              <strong data-en="Integrity" data-es="Integridad">Integrity</strong>
+                              <p data-en="We operate with honesty and transparency in every interaction" data-es="Operamos con honestidad y transparencia en cada interacción">We operate with honesty and transparency in every interaction</p>
+                          </div>
+                          <div class="value-item">
+                              <strong data-en="Client-First" data-es="Cliente Primero">Client-First</strong>
+                              <p data-en="Your needs and satisfaction are at the heart of everything we do" data-es="Sus necesidades y satisfacción están en el corazón de todo lo que hacemos">Your needs and satisfaction are at the heart of everything we do</p>
+                          </div>
+                          <div class="value-item">
+                              <strong data-en="Excellence" data-es="Excelencia">Excellence</strong>
+                              <p data-en="We strive for the highest standards in service and coverage" data-es="Nos esforzamos por los más altos estándares en servicio y cobertura">We strive for the highest standards in service and coverage</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="about-us-stats">
+                      <div class="stat-card">
+                          <div class="stat-number">40+</div>
+                          <div class="stat-label" data-en="Years of Combined Experience" data-es="Años de Experiencia Compbinada">Years of Combined Experience</div>
+                      </div>
+                      <div class="stat-card">
+                          <div class="stat-number">5000+</div>
+                          <div class="stat-label" data-en="Happy Clients" data-es="Clientes Satisfechos">Happy Clients</div>
+                      </div>
+                      <div class="stat-card">
+                          <div class="stat-number">98%</div>
+                          <div class="stat-label" data-en="Satisfaction Rate" data-es="Tasa de Satisfacción">Satisfaction Rate</div>
+                      </div>
+                      <div class="stat-card">
+                          <div class="stat-number">24/7</div>
+                          <div class="stat-label" data-en="Support Available" data-es="Soporte Disponible">Support Available</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/maday.jpg" alt="Business Owner">
+                </div>
+                <div class="about-text">
+                    <h2 data-en="Meet Our Founder" data-es="Conozca a Nuestra Fundadora">Meet Our Founder</h2>
+                    <h3 data-en="Maday Ester Garcia, CEO & Founder" data-es="Maday Ester Garcia, CEO y Fundadora">"Maday Ester Garcia, CEO & Founder</h3>
+                    <p data-en="With over 10 years of experience in the insurance industry, Maday founded B&G Insurance Group with a simple mission: to provide personalized, reliable insurance solutions that truly protect what matters most to families and businesses." data-es="Con más de 10 años de experiencia en la industria de seguros, Maday fundó B&G Insurance Group con una misión simple: proporcionar soluciones de seguros personalizadas y confiables que realmente protejan lo que más importa para las familias y empresas.">With over 10 years of experience in the insurance industry, Maday founded B&G Insurance Group with a simple mission: to provide personalized, reliable insurance solutions that truly protect what matters most to families and businesses.</p>
+                    <p data-en="Maday's approach is built on trust, transparency, and a deep understanding of her clients' needs. She believes that insurance should be straightforward, accessible, and tailored to each individual's unique circumstances." data-es="El enfoque de Maday se basa en la confianza, la transparencia y una comprensión profunda de las necesidades de sus clientes. Ella cree que el seguro debe ser directo, accesible y adaptado a las circunstancias únicas de cada individuo.">Maday's approach is built on trust, transparency, and a deep understanding of her clients' needs. She believes that insurance should be straightforward, accessible, and tailored to each individual's unique circumstances.</p>
+                    <p data-en="Under her leadership, B&G Insurance Group has grown to serve thousands of satisfied clients, earning a reputation for exceptional service and comprehensive coverage options." data-es="Bajo su liderazgo, B&G Insurance Group ha crecido para servir a miles de clientes satisfechos, ganándose una reputación por su servicio excepcional y opciones de cobertura integral.">Under her leadership, B&G Insurance Group has grown to serve thousands of satisfied clients, earning a reputation for exceptional service and comprehensive coverage options.</p>
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <span class="credential-icon">✓</span>
+                            <span data-en="Licensed Insurance Professional" data-es="Profesional de Seguros Licenciada">Licensed Insurance Professional</span>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-icon">✓</span>
+                            <span data-en="20+ Years Experience" data-es="Más de 20 Años de Experiencia">20+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title" data-en="Why Choose Us" data-es="¿Por Qué Elegirnos?">Why Choose Us?</h2>
+            <p class="section-subtitle" data-en="We go above and beyond to provide exceptional service and protection" data-es="Vamos más allá para brindar un servicio y protección excepcionales">We go above and beyond to provide exceptional service and protection</p>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h4 data-en="Full Confidence & Reliability" data-es="Plena Confianza y Fiabilidad">Full Confidence & Reliability</h4>
+                    <p data-en="We offer reliable and thorough services from our experienced insurance professionals who understand your needs and work diligently to protect your interests." data-es="Ofrecemos servicios confiables y exhaustivos de nuestros profesionales de seguros experimentados que entienden sus necesidades y trabajan diligentemente para proteger sus intereses.">We offer reliable and thorough services from our experienced insurance professionals who understand your needs and work diligently to protect your interests.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👤</div>
+                    <h4 data-en="Personalized Solutions" data-es="Soluciones Personalizadas">Personalized Solutions</h4>
+                    <p data-en="Every client is unique. We tailor our insurance packages to match your specific requirements, lifestyle, and budget, ensuring you get the coverage that's right for you." data-es="Cada cliente es único. Adaptamos nuestros paquetes de seguro para satisfacer sus requisitos específicos, estilo de vida y presupuesto, asegurando que obtenga la cobertura adecuada para usted.">Every client is unique. We tailor our insurance packages to match your specific requirements, lifestyle, and budget, ensuring you get the coverage that's right for you.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h4 data-en="Quick Claims Processing" data-es="Procesamiento Rápido de Reclamos">Quick Claims Processing</h4>
+                    <p data-en="We understand urgency. Our streamlined claims process ensures you get the support and compensation you need quickly and efficiently, without unnecessary delays." data-es="Entendemos la urgencia. Nuestro proceso simplificado de reclamos garantiza que obtenga el apoyo y la compensación que necesita de manera rápida y eficiente, sin demoras innecesarias.">We understand urgency. Our streamlined claims process ensures you get the support and compensation you need quickly and efficiently, without unnecessary delays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <!-- Section Header -->
+            <h2 class="section-title" data-en="What Our Clients Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Clients Say</h2>
+            <p class="section-subtitle" data-en="Real experiences from families and businesses we've protected" data-es="Experiencias reales de familias y negocios que hemos protegido">Real experiences from families and businesses we've protected</p>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-en="The best service" data-es="El mejor servicio">The best service</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <strong>Maria Rodriguez</strong>
+                            <span data-en="Home & Auto Insurance" data-es="Seguro de Hogar y Auto">Home & Auto Insurance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... 3 more testimonial cards with same structure ... -->
+            </div>
+
+            <!-- Google Reviews CTA -->
+            <div class="testimonials-cta">
+                <p data-en="Read more reviews from our satisfied clients" data-es="Lea más reseñas de nuestros clientes satisfechos">Read more reviews from our satisfied clients</p>
+                <a href="https://www.google.com/search?q=b%26g+insurance+group" target="_blank" class="google-reviews-btn">
+                    <svg><!-- Google icon --></svg>
+                    <span data-en="See Google Reviews" data-es="Ver Reseñas de Google">See Google Reviews</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+   <section class="faq" id="faq">
+           <div class="container">
+               <h2 class="section-title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+               <p class="section-subtitle" data-en="Find answers to common questions about our insurance services" data-es="Encuentre respuestas a preguntas comunes sobre nuestros servicios de seguros">Find answers to common questions about our insurance services</p>
+
+               <div class="faq-container">
+                   <!-- FAQ Item 1 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="What types of insurance do you offer?" data-es="¿Qué tipos de seguros ofrecen?">What types of insurance do you offer?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="We offer a comprehensive range of insurance products including Home, Auto, Life, Health, Business, and Travel insurance. Each policy is tailored to meet your specific needs and budget." data-es="Ofrecemos una amplia gama de productos de seguros que incluyen seguros de Hogar, Auto, Vida, Salud, Negocios y Viajes. Cada póliza está diseñada para satisfacer sus necesidades específicas y presupuesto.">We offer a comprehensive range of insurance products including Home, Auto, Life, Health, Business, and Travel insurance. Each policy is tailored to meet your specific needs and budget.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 2 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="How quickly can I get coverage?" data-es="¿Qué tan rápido puedo obtener cobertura?">How quickly can I get coverage?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="In most cases, coverage can begin immediately or within 24 hours of approval. For auto insurance, we can often provide same-day coverage. Life and health insurance may require a brief underwriting process, typically completed within a few days." data-es="En la mayoría de los casos, la cobertura puede comenzar de inmediato o dentro de las 24 horas posteriores a la aprobación. Para seguros de auto, a menudo podemos proporcionar cobertura el mismo día. Los seguros de vida y salud pueden requerir un breve proceso de suscripción, generalmente completado en unos pocos días.">In most cases, coverage can begin immediately or within 24 hours of approval. For auto insurance, we can often provide same-day coverage. Life and health insurance may require a brief underwriting process, typically completed within a few days.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 3 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="Do I need a US driver's license to get auto insurance?" data-es="¿Necesito una licencia de conducir de EE. UU. para obtener seguro de auto?">Do I need a US driver's license to get auto insurance?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="No! We work with clients who have international licenses or licenses from their home country. We understand the needs of our immigrant community and have solutions available regardless of your license status. Contact us to discuss your specific situation." data-es="¡No! Trabajamos con clientes que tienen licencias internacionales o licencias de su país de origen. Entendemos las necesidades de nuestra comunidad inmigrante y tenemos soluciones disponibles independientemente del estado de su licencia. Contáctenos para discutir su situación específica.">No! We work with clients who have international licenses or licenses from their home country. We understand the needs of our immigrant community and have solutions available regardless of your license status. Contact us to discuss your specific situation.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 4 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="How do I file a claim?" data-es="¿Cómo presento un reclamo?">How do I file a claim?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="Filing a claim is simple. Contact us immediately, and our team will guide you through the entire process. We handle all the paperwork and communication with insurance companies to make your experience as smooth and stress-free as possible." data-es="Presentar un reclamo es simple. Contáctenos de inmediato, y nuestro equipo lo guiará a través de todo el proceso. Manejamos todo el papeleo y la comunicación con las compañías de seguros para que su experiencia sea lo más fluida y libre de estrés posible.">Filing a claim is simple. Contact us immediately, and our team will guide you through the entire process. We handle all the paperwork and communication with insurance companies to make your experience as smooth and stress-free as possible.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 5 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="What payment options do you accept?" data-es="¿Qué opciones de pago aceptan?">What payment options do you accept?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="We offer flexible payment options including monthly, quarterly, semi-annual, and annual payments. We accept credit cards, debit cards, electronic checks, and automatic bank transfers. We'll work with you to find a payment schedule that fits your budget." data-es="Ofrecemos opciones de pago flexibles que incluyen pagos mensuales, trimestrales, semestrales y anuales. Aceptamos tarjetas de crédito, tarjetas de débito, cheques electrónicos y transferencias bancarias automáticas. Trabajaremos con usted para encontrar un plan de pago que se ajuste a su presupuesto.">We offer flexible payment options including monthly, quarterly, semi-annual, and annual payments. We accept credit cards, debit cards, electronic checks, and automatic bank transfers. We'll work with you to find a payment schedule that fits your budget.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 6 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="Can I bundle multiple insurance policies?" data-es="¿Puedo agrupar múltiples pólizas de seguro?">Can I bundle multiple insurance policies?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="Yes! Bundling your home and auto insurance, or combining other policies, can save you up to 25% on your premiums. We'll review all your insurance needs and create a customized package that maximizes your coverage while minimizing your costs." data-es="¡Sí! Agrupar su seguro de hogar y auto, o combinar otras pólizas, puede ahorrarle hasta un 25% en sus primas. Revisaremos todas sus necesidades de seguro y crearemos un paquete personalizado que maximice su cobertura mientras minimiza sus costos.">Yes! Bundling your home and auto insurance, or combining other policies, can save you up to 25% on your premiums. We'll review all your insurance needs and create a customized package that maximizes your coverage while minimizing your costs.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 7 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="Do you provide service in Spanish?" data-es="¿Brindan servicio en español?">Do you provide service in Spanish?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="Absolutely! Our entire team is bilingual and fluent in both English and Spanish. We're committed to serving our Spanish-speaking community with the same level of dedication and expertise. All our documents, consultations, and support are available in Spanish." data-es="¡Absolutamente! Todo nuestro equipo es bilingüe y habla con fluidez inglés y español. Estamos comprometidos a servir a nuestra comunidad hispanohablante con el mismo nivel de dedicación y experiencia. Todos nuestros documentos, consultas y soporte están disponibles en español.">Absolutely! Our entire team is bilingual and fluent in both English and Spanish. We're committed to serving our Spanish-speaking community with the same level of dedication and expertise. All our documents, consultations, and support are available in Spanish.</p>
+                       </div>
+                   </div>
+
+                   <!-- FAQ Item 8 -->
+                   <div class="faq-item">
+                       <button class="faq-question" onclick="toggleFaq(this)">
+                           <span data-en="What documents do I need to get a quote?" data-es="¿Qué documentos necesito para obtener una cotización?">What documents do I need to get a quote?</span>
+                           <span class="faq-icon">+</span>
+                       </button>
+                       <div class="faq-answer">
+                           <p data-en="The documents required vary by insurance type. Generally, you'll need valid identification (passport or ID), proof of address, and information about the item you're insuring (vehicle VIN, home address, etc.). For specific requirements, give us a call and we'll provide a detailed checklist." data-es="Los documentos requeridos varían según el tipo de seguro. Generalmente, necesitará una identificación válida (pasaporte o ID), comprobante de domicilio e información sobre el artículo que está asegurando (VIN del vehículo, dirección del hogar, etc.). Para requisitos específicos, llámenos y le proporcionaremos una lista detallada.">The documents required vary by insurance type. Generally, you'll need valid identification (passport or ID), proof of address, and information about the item you're insuring (vehicle VIN, home address, etc.). For specific requirements, give us a call and we'll provide a detailed checklist.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2 data-en="Ready to Secure Your Future?" data-es="¿Listo Para Asegurar Su Futuro?">Ready to Secure Your Future?</h2>
+            <p data-en="Get a free consultation with our insurance experts today. No obligation, just honest advice." data-es="Obtenga una consulta gratuita con nuestros expertos en seguros hoy. Sin obligación, solo consejos honestos.">Get a free consultation with our insurance experts today. No obligation, just honest advice.</p>
+            <!--<a href="#contact" class="cta-button" data-en="Contact Us Now" data-es="Contáctenos Ahora">Contact Us Now</a> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-es="Póngase En Contacto">Get In Touch</h2>
+            <p class="section-subtitle" data-en="We're here to answer your questions and help you find the perfect coverage" data-es="Estamos aquí para responder sus preguntas y ayudarle a encontrar la cobertura perfecta">We're here to answer your questions and help you find the perfect coverage</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 data-en="Contact Information" data-es="Información de Contacto">Contact Information</h3>
+                    <div class="contact-item" style="">
+                        <div class="contact-item-icon"> <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48" height="48" viewBox="0 0 2048 2048" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"><defs><style>.fil3{fill:#bf0000}</style></defs><g id="Layer_x0020_1"><path d="M1800 934v779c0 13-11 23-23 23H288c-13 0-23-11-23-23V934l728-505c22-15 60-14 83 2l726 503h-1z" style="fill:#9c0000"/><path style="fill:#e8e8d0" d="M392 576h1280v838H392z"/><path d="M1121 1200c-30 35-72 59-119 59h-10c-43-3-79-26-104-61-24-33-36-73-38-113v-15c0-6 0-12 1-18 4-51 22-102 55-141 31-36 73-62 122-62h10c37 3 70 21 94 48l3-48 58 3-19 309c-1 16 5 30 18 39 7 5 15 6 23 6 47-2 85-42 103-83 20-44 26-104 14-150v-2c-14-51-41-98-79-136-57-57-134-89-216-89-81 0-158 32-216 89-57 57-89 134-89 216 0 81 32 158 89 216 57 57 134 89 216 89 65 0 128-20 180-59l23-17v72l-7 4c-59 38-127 58-197 58-97 0-188-38-257-106-68-68-106-160-106-257s38-188 106-257c68-68 160-106 257-106s188 38 257 106c45 45 77 101 94 162v1c13 59 9 130-16 185-28 62-84 118-156 121-21 1-41-4-58-16-18-12-29-30-36-49zm-213-125c1 31 9 63 27 88 15 20 36 35 62 37h5c31 0 58-18 77-41 25-30 39-69 42-108v-19c-1-31-9-63-27-88-15-20-36-35-62-37h-5c-31 0-58 18-77 41-25 30-39 69-42 108v19z" style="fill:#37474f"/><path class="fil3" d="m268 1725 608-416-612-375v778c0 5 1 9 4 12zM1800 1713V934h-1l-616 378 613 413c2-4 4-8 4-12z"/><path d="M1797 1725c-4 7-12 11-20 11H288c-8 0-16-4-20-11l724-503c22-15 59-14 83 2l722 501z" style="fill:#d50000"/><path style="fill:none" d="M0 0h2048v2048H0z"/></g></svg>
+                    </div>
+                        <div>
+                            <strong data-en="Email" data-es="Correo Electrónico">Email</strong>
+                            <a href="mailto:bginsurance@gmail.com">bginsurance@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48" height="48"  viewBox="0 0 2048 2048" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"><defs><style>.fil1{fill:#051324}.fil2{fill:#4fc3f7}.fil4{fill:#fff}</style></defs><g id="Layer_x0020_1"><path d="M584 252h847c10 0 19 2 28 6s17 9 23 16c7 7 12 15 16 23 4 9 6 18 6 28v1391c0 10-2 19-6 28s-9 17-16 23c-7 7-15 12-23 16-9 4-18 6-28 6H584c-10 0-19-2-28-6s-17-9-23-16c-7-7-12-15-16-23-4-9-6-18-6-28V325c0-10 2-19 6-28s9-17 16-23c7-7 15-12 23-16 9-4 18-6 28-6z" style="fill:#15262e"/><path class="fil1" d="M608 374h800v1094H608z"/><path class="fil2" d="M618 391h777v1077H618z"/><path style="fill:#81d4fa" d="M732 391h663v1077h-176z"/><path class="fil2" d="M618 391h114l487 1077H618z"/><path class="fil4" d="M1036 1566c-4-2-8-2-12-2-5 0-9 1-12 2-4 2-7 4-10 7s-5 7-7 10c-2 4-2 8-2 12s1 9 2 12c2 4 4 8 7 11s6 5 10 7 8 2 12 2 9-1 12-2c4-2 8-4 10-7 3-3 5-7 7-11s2-8 2-12c0-5-1-9-2-12-2-4-4-7-7-10s-6-5-10-7z"/><path class="fil4" d="M1008 1524c13 0 25 3 37 7 12 5 22 12 31 21s16 19 21 31c5 11 7 24 7 37s-3 25-7 37c-5 12-12 22-21 31s-19 16-31 21c-11 5-24 7-37 7s-25-3-37-7c-12-5-22-12-31-21s-16-19-21-31c-5-11-7-24-7-37s3-25 7-37c5-12 12-22 21-31s19-16 31-21c11-5 24-7 37-7z"/><rect x="895" y="309" width="226" height="25" rx="13" ry="13" style="fill:#020d1a"/><path class="fil1" d="M1008 1542c10 0 20 2 30 6s18 10 25 17 13 16 17 25 6 19 6 30c0 10-2 20-6 30-4 9-10 18-17 25s-16 13-25 17-19 6-30 6c-10 0-20-2-30-6-9-4-18-10-25-17s-13-16-17-25-6-19-6-30c0-10 2-20 6-30s10-18 17-25 16-13 25-17 19-6 30-6z"/><path style="fill:none" d="M0 0h2048v2048H0z"/></g></svg></div>
+                        <div>
+                            <strong data-en="Phone" data-es="Teléfono">Phone</strong>
+                            <a href="tel:(728) 205-6548">(728) 205-6548</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><style>.cls-3{fill:#9dcc6b}.cls-7{fill:#919191}</style></defs><g id="Adress_location" data-name="Adress location"><path d="M39 16c0 6.87-10.7 21-15 26-4.37-5.14-15-19.12-15-26a15 15 0 0 1 30 0z" style="fill:#db5669"/><path d="M39 16c0 7.28-11.92 22.15-11.17 21.17a2 2 0 0 1-3.1 0C20.81 32.22 12 20.35 12 14a14.9 14.9 0 0 1 5.27-11.4A15 15 0 0 1 39 16z" style="fill:#f26674"/><path class="cls-3" d="M40 42c0 2.76-7.16 5-16 5S8 44.76 8 42c0-2.35 5.17-4.32 12.15-4.85C22.35 40.06 24 42 24 42s1.65-1.94 3.85-4.85C34.83 37.68 40 39.65 40 42z"/><path class="cls-3" d="M34.76 45.7a18.91 18.91 0 0 0 2.1-.73 17.67 17.67 0 0 1-2.1.73zM36.86 45c.4-.17.76-.35 1.09-.53a8.51 8.51 0 0 1-1.09.53z"/><path d="M40 42a1.86 1.86 0 0 1-.38 1.06c-10.2 4.11-32 1.14-28.23-4.14a26.92 26.92 0 0 1 6.21-1.5C18.4 38.48 20.27 41 22 43c0 0 .54-.63 1.41-1.71L24 42s1.65-1.94 3.85-4.85C34.83 37.68 40 39.65 40 42z" style="fill:#b5e08c"/><path class="cls-3" d="M39.63 43.06c-.05.07-.07.09 0 0zM39.58 43.12l-.2.25zM39.07 43.68a3 3 0 0 0 .31-.31z"/><path d="M35 16a11 11 0 0 1-11 11C13.56 27 9 13.66 17.29 7.29A11 11 0 0 1 35 16z" style="fill:#dad7e5"/><path d="M35 16a10.88 10.88 0 0 1-2.29 6.71A11 11 0 0 1 21.41 24H27a1 1 0 0 0 0-2h-1v-6h2l-2-2v-3a1 1 0 0 0-2 0v1l-2-2-6 6h2v5.55a11 11 0 0 1-.71-14.26A11 11 0 0 1 35 16z" style="fill:#edebf2"/><path class="cls-7" d="M26 14v-4a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0z"/><path style="fill:#df8761" d="M30 15H18l6-6 6 6z"/><path d="M29 14h-5.17a2 2 0 0 1-1.42-3.41L24 9z" style="fill:#f29b75"/><path style="fill:#fc6" d="M20 15h8v7h-8z"/><path d="M28 16v6a6 6 0 0 1-6-6z" style="fill:#ffde76"/><path class="cls-7" d="M29 23H19a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2z"/></g></svg></div>
+                        <div>
+                            <strong data-en="Address" data-es="Dirección">Address</strong>
+                            <a href="https://maps.app.goo.gl/87bwXzyCDF48p2m99">2755 W 8th Avenue<br>Hialeah, Fl 33010</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48" height="48" viewBox="0 0 2048 2048"  style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd"><defs><style>.fil1{fill:none}.fil3{fill:#424242}.fil0{fill:#d84315}.fil4{fill:#757575;fill-rule:nonzero}</style></defs><g id="Layer_x0020_1"><g id="_520296824"><path id="_520292912" class="fil0" d="M1024 255.997c212.073 0 404.074 85.963 543.057 224.946S1792.003 811.927 1792.003 1024c0 212.072-85.964 404.073-224.946 543.055-138.983 138.983-330.984 224.946-543.057 224.946-212.072 0-404.073-85.963-543.056-224.946C341.962 1428.073 255.998 1236.072 255.998 1024c0-212.073 85.963-404.074 224.946-543.057C619.927 341.961 811.927 255.997 1024 255.997z"/><path id="_520294496" class="fil1" d="M255.998 256h1536v1536h-1536z"/><path id="_520289168" class="fil1" d="M0 0h2048v2048H0z"/><path id="_520292744" d="M1024 383.999c176.727 0 336.728 71.636 452.547 187.454 115.818 115.819 187.454 275.82 187.454 452.547 0 176.726-71.638 336.727-187.454 452.544-115.819 115.818-275.82 187.454-452.547 187.454-176.726 0-336.727-71.636-452.546-187.454C455.636 1360.726 384 1200.726 384 1024c0-176.727 71.636-336.728 187.454-452.547C687.273 455.635 847.272 383.999 1024 383.999z" style="fill:#fff"/><path id="_520277624" class="fil3" d="M465.744 977.99c12.771 0 24.335 5.178 32.706 13.55 8.372 8.37 13.55 19.934 13.55 32.706 0 12.772-5.18 24.336-13.55 32.707-8.37 8.37-19.935 13.55-32.706 13.55-12.773 0-24.337-5.18-32.707-13.55-8.37-8.37-13.55-19.935-13.55-32.707 0-12.772 5.178-24.336 13.55-32.706 8.37-8.372 19.935-13.55 32.707-13.55z"/><path id="_520298600" class="fil3" d="M1582.26 977.99c12.771 0 24.335 5.178 32.706 13.55 8.372 8.37 13.55 19.934 13.55 32.706 0 12.772-5.18 24.336-13.55 32.707-8.37 8.37-19.935 13.55-32.706 13.55-12.773 0-24.337-5.18-32.707-13.55-8.37-8.37-13.55-19.935-13.55-32.707 0-12.772 5.178-24.336 13.55-32.706 8.37-8.372 19.935-13.55 32.707-13.55z"/><path id="_520281368" class="fil3" d="M1070.26 465.99c0 12.771-5.178 24.335-13.55 32.706-8.37 8.372-19.934 13.55-32.706 13.55-12.772 0-24.336-5.18-32.707-13.55-8.37-8.37-13.55-19.935-13.55-32.706 0-12.773 5.18-24.337 13.55-32.707 8.37-8.37 19.935-13.55 32.708-13.55 12.77 0 24.335 5.178 32.705 13.55 8.372 8.37 13.55 19.935 13.55 32.707z"/><path id="_520291040" class="fil3" d="M1070.26 1582.5c0 12.771-5.178 24.335-13.55 32.706-8.37 8.372-19.934 13.55-32.706 13.55-12.772 0-24.336-5.18-32.707-13.55-8.37-8.37-13.55-19.935-13.55-32.706 0-12.773 5.18-24.337 13.55-32.707 8.37-8.37 19.935-13.55 32.708-13.55 12.77 0 24.335 5.178 32.705 13.55 8.372 8.37 13.55 19.935 13.55 32.707z"/><g><path id="_520293680" class="fil4" d="M1046.5 584.945c0-12.426-10.074-22.5-22.5-22.5s-22.5 10.074-22.5 22.5v448c0 12.426 10.074 22.5 22.5 22.5s22.5-10.074 22.5-22.5v-448z"/><path id="_520280960" class="fil4" d="M1366.19 1055.91c12.426.026 22.521-10.028 22.547-22.454.026-12.426-10.026-22.52-22.453-22.546l-342.233-.932c-12.426-.026-22.52 10.026-22.547 22.453-.026 12.426 10.027 22.521 22.453 22.547l342.233.932z"/><circle id="_520291616" class="fil0" cx="1024" cy="1032.95" r="48.578"/></g></g></g></svg></div>
+                        <div>
+                            <strong data-en="Business Hours" data-es="Horario de Atención">Business Hours</strong>
+                            <p data-en="Monday - Friday: 9:00 AM - 6:00 PM" data-es="Lunes - Viernes: 9:00 AM - 6:00 PM">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p data-en="Saturday: 10:00 AM - 2:00 PM" data-es="Sábado: 10:00 AM - 2:00 PM">Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-en="Send Us a Message" data-es="Envíenos un Mensaje">Send Us a Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <input type="text" placeholder="Name / Nombre" required>
+                        <input type="email" placeholder="Email / Correo" required>
+                        <input type="tel" placeholder="Phone / Teléfono">
+                        <textarea rows="5" placeholder="Message / Mensaje" required></textarea>
+                        <button type="submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 B&G Insurance Group. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+        </div>
+    </footer>
+</body>
+</html>
