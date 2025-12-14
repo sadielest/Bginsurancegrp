@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const totalSlides = 6;
+const totalSlides = 8;
 let autoplayInterval;
 
 // Theme toggle functionality

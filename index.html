@@ -8,7 +8,6 @@
 </head>
 <body>
     <script src="script.js" async defer></script>
-    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div>
@@ -21,7 +20,6 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -100,7 +98,6 @@
         </div>
     </section>
 
-    <!-- Services Carousel Section -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title" data-en="Our Insurance Services" data-es="Nuestros Servicios de Seguros">Our Insurance Services</h2>
@@ -150,6 +147,20 @@
                             <p data-en="Travel worry-free with comprehensive coverage for trip cancellations, medical emergencies, and lost luggage. Domestic and international travel protection plans available." data-es="Viaje sin preocupaciones con cobertura integral para cancelaciones de viaje, emergencias médicas y equipaje perdido. Planes de protección de viajes nacionales e internacionales disponibles.">Travel worry-free with comprehensive coverage for trip cancellations, medical emergencies, and lost luggage. Domestic and international travel protection plans available.</p>
                         </div>
                     </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=800&fit=crop" alt="Liability Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Liability Insurance" data-es="Seguro de Responsabilidad Civil">Liability Insurance</h3>
+                            <p data-en="Protect yourself from financial loss due to lawsuits and claims. Comprehensive general liability, professional liability, and umbrella coverage options for individuals and businesses." data-es="Protéjase de pérdidas financieras debido a demandas y reclamos. Opciones integrales de responsabilidad general, responsabilidad profesional y cobertura complementaria para individuos y empresas.">Protect yourself from financial loss due to lawsuits and claims. Comprehensive general liability, professional liability, and umbrella coverage options for individuals and businesses.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&h=800&fit=crop" alt="Pet Insurance">
+                        <div class="carousel-overlay">
+                            <h3 data-en="Pet Insurance" data-es="Seguro para Mascotas">Pet Insurance</h3>
+                            <p data-en="Keep your furry friends healthy and happy with comprehensive pet insurance. Coverage for accidents, illnesses, routine care, and emergency veterinary services for dogs, cats, and exotic pets." data-es="Mantenga a sus amigos peludos saludables y felices con un seguro integral para mascotas. Cobertura para accidentes, enfermedades, atención de rutina y servicios veterinarios de emergencia para perros, gatos y mascotas exóticas.">Keep your furry friends healthy and happy with comprehensive pet insurance. Coverage for accidents, illnesses, routine care, and emergency veterinary services for dogs, cats, and exotic pets.</p>
+                        </div>
+                    </div>
                 </div>
                 <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">‹</button>
                 <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">›</button>
@@ -161,13 +172,18 @@
                 <span class="dot" onclick="setCarousel(3)"></span>
                 <span class="dot" onclick="setCarousel(4)"></span>
                 <span class="dot" onclick="setCarousel(5)"></span>
+                <span class="dot" onclick="setCarousel(6)"></span>
+                <span class="dot" onclick="setCarousel(7)"></span>
+
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
       <section class="about-us" id="about-us">
           <div class="container">
+              <div style="text-align: center; margin-bottom: 1rem;">
+                  <img src="assets/gfg.png" alt="Se Habla Español" style="max-width: 200px; height: auto;">
+              </div>
               <h2 class="section-title" data-en="About B&G Insurance Group" data-es="Acerca de B&G Insurance Group">About B&G Insurance Group</h2>
               <p class="section-subtitle" data-en="Your trusted partner in comprehensive insurance solutions" data-es="Su socio de confianza en soluciones integrales de seguros">Your trusted partner in comprehensive insurance solutions</p>
 
@@ -211,7 +227,7 @@
                   <div class="about-us-stats">
                       <div class="stat-card">
                           <div class="stat-number">40+</div>
-                          <div class="stat-label" data-en="Years of Combined Experience" data-es="Años de Experiencia Compbinada">Years of Combined Experience</div>
+                          <div class="stat-label" data-en="Years of Combined Experience" data-es="Años de Experiencia Combinada">Years of Combined Experience</div>
                       </div>
                       <div class="stat-card">
                           <div class="stat-number">5000+</div>
@@ -230,7 +246,6 @@
           </div>
       </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
@@ -258,7 +273,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="why-choose">
         <div class="container">
             <h2 class="section-title" data-en="Why Choose Us" data-es="¿Por Qué Elegirnos?">Why Choose Us?</h2>
@@ -285,13 +299,10 @@
 
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <!-- Section Header -->
             <h2 class="section-title" data-en="What Our Clients Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Clients Say</h2>
             <p class="section-subtitle" data-en="Real experiences from families and businesses we've protected" data-es="Experiencias reales de familias y negocios que hemos protegido">Real experiences from families and businesses we've protected</p>
 
-            <!-- Testimonials Grid -->
             <div class="testimonials-grid">
-                <!-- Testimonial Card 1 -->
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text" data-en="The best service" data-es="El mejor servicio">The best service</p>
@@ -330,14 +341,12 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
    <section class="faq" id="faq">
            <div class="container">
                <h2 class="section-title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
                <p class="section-subtitle" data-en="Find answers to common questions about our insurance services" data-es="Encuentre respuestas a preguntas comunes sobre nuestros servicios de seguros">Find answers to common questions about our insurance services</p>
 
                <div class="faq-container">
-                   <!-- FAQ Item 1 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="What types of insurance do you offer?" data-es="¿Qué tipos de seguros ofrecen?">What types of insurance do you offer?</span>
@@ -348,7 +357,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 2 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="How quickly can I get coverage?" data-es="¿Qué tan rápido puedo obtener cobertura?">How quickly can I get coverage?</span>
@@ -359,7 +367,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 3 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="Do I need a US driver's license to get auto insurance?" data-es="¿Necesito una licencia de conducir de EE. UU. para obtener seguro de auto?">Do I need a US driver's license to get auto insurance?</span>
@@ -370,7 +377,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 4 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="How do I file a claim?" data-es="¿Cómo presento un reclamo?">How do I file a claim?</span>
@@ -381,7 +387,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 5 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="What payment options do you accept?" data-es="¿Qué opciones de pago aceptan?">What payment options do you accept?</span>
@@ -392,7 +397,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 6 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="Can I bundle multiple insurance policies?" data-es="¿Puedo agrupar múltiples pólizas de seguro?">Can I bundle multiple insurance policies?</span>
@@ -403,7 +407,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 7 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="Do you provide service in Spanish?" data-es="¿Brindan servicio en español?">Do you provide service in Spanish?</span>
@@ -414,7 +417,6 @@
                        </div>
                    </div>
 
-                   <!-- FAQ Item 8 -->
                    <div class="faq-item">
                        <button class="faq-question" onclick="toggleFaq(this)">
                            <span data-en="What documents do I need to get a quote?" data-es="¿Qué documentos necesito para obtener una cotización?">What documents do I need to get a quote?</span>
@@ -428,7 +430,6 @@
            </div>
        </section>
 
-    <!-- CTA Banner -->
     <section class="cta-banner">
         <div class="container">
             <h2 data-en="Ready to Secure Your Future?" data-es="¿Listo Para Asegurar Su Futuro?">Ready to Secure Your Future?</h2>
@@ -437,7 +438,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title" data-en="Get In Touch" data-es="Póngase En Contacto">Get In Touch</h2>
@@ -490,7 +490,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 B&G Insurance Group. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
