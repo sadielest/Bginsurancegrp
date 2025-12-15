@@ -850,9 +850,50 @@ footer p {
     display: none;
     background: none;
     border: none;
-    font-size: 1.8rem;
     cursor: pointer;
-    color: var(--color);
+    padding: 0.5rem;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--color);
+    border-radius: 3px;
+    position: absolute;
+    left: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+    top: 12px;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+    top: 20px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+    top: 28px;
+}
+
+/* Animated X when active */
+.mobile-menu-toggle.active span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
 }
 
 /* Responsive Design */

@@ -87,7 +87,9 @@ function updateLanguage() {
 
 function toggleMenu() {
   const nav = document.getElementById('mainNav');
+  const toggle = document.getElementById('mobileMenuToggle');
   nav.classList.toggle('active');
+  toggle.classList.toggle('active');
 }
 
 function handleSubmit(e) {
@@ -163,6 +165,7 @@ window.onload = () => {
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById('mainNav').classList.remove('active');
+      document.getElementById('mobileMenuToggle').classList.remove('active');
     });
   });
 
