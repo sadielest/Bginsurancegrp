@@ -113,7 +113,7 @@ nav a {
     position: relative;
 }
 
-nav a::after {
+nav a:after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -248,20 +248,92 @@ nav a:hover::after {
 }
 
 .flag-icon {
-    width: 24px;
+    width: 30px;
     height: 24px;
     position: absolute;
     transition: transform 0.4s cubic-bezier(.5, 1.25, .75, 1.25), opacity 0.3s ease;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* US Flag */
 .flag-icon.us {
+    background: linear-gradient(to bottom,
+            #B22234 0%, #B22234 7.69%,
+            white 7.69%, white 15.38%,
+            #B22234 15.38%, #B22234 23.07%,
+            white 23.07%, white 30.76%,
+            #B22234 30.76%, #B22234 38.45%,
+            white 38.45%, white 46.14%,
+            #B22234 46.14%, #B22234 53.83%,
+            white 53.83%, white 61.52%,
+            #B22234 61.52%, #B22234 69.21%,
+            white 69.21%, white 76.9%,
+            #B22234 76.9%, #B22234 84.59%,
+            white 84.59%, white 92.28%,
+            #B22234 92.28%, #B22234 100%);
     transform: translateY(0) scale(1);
     opacity: 1;
 }
 
+.flag-icon.us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 53.8%;
+    background: #3C3B6E;
+}
+
+.flag-icon.us::after {
+    content: '★★★★★★ ★★★★★★ ★★★★★★ ★★★★★★ ★★★★★★';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 40%;
+    height: 53.8%;
+    color: white;
+    font-size: 1.5px;
+    line-height: 2px;
+    letter-spacing: 0.3px;
+    word-spacing: -0.5px;
+    padding: 0.1px;
+}
+
+/* Cuban Flag */
 .flag-icon.es {
+    background: linear-gradient(to bottom,
+            #002A8F 0%, #002A8F 20%,
+            white 20%, white 40%,
+            #002A8F 40%, #002A8F 60%,
+            white 60%, white 80%,
+            #002A8F 80%, #002A8F 100%);
     transform: translateY(30px) scale(0.8);
     opacity: 0;
+}
+
+.flag-icon.es::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 14px;
+    border-color: transparent transparent transparent #CF142B;
+}
+
+.flag-icon.es::after {
+    content: '★';
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    color: white;
+    font-size: 6px;
+    line-height: 6px;
 }
 
 [data-lang="es"] .flag-icon.us {
@@ -925,7 +997,6 @@ footer p {
     }
 
     nav {
-        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -935,13 +1006,25 @@ footer p {
         padding: 1.5rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         gap: 1rem;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 1.5rem;
     }
 
     nav.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        max-height: 500px;
+        padding: 1.5rem;
     }
 
-    nav a::after {
+    nav a:after {
         display: none;
     }
 
@@ -1226,6 +1309,14 @@ footer p {
         font-size: 1rem;
     }
 
+    .about-us-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+
 }
 
 .testimonials {
@@ -1461,6 +1552,34 @@ body.dark .google-reviews-btn:hover {
 
 /* Mobile */
 @media (max-width: 480px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        gap: 1rem;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 1.5rem;
+    }
+
+    nav.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        max-height: 500px;
+        padding: 1.5rem;
+    }
+
     .container {
         padding: 0 1rem;
     }
@@ -1520,5 +1639,21 @@ body.dark .google-reviews-btn:hover {
         width: 20px;
         /* ✓ Smaller icon */
         height: 20px;
+    }
+
+    .about-us-stats {
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
     }
 }
